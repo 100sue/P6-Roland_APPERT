@@ -36,28 +36,30 @@ Le Frontend (développé à l'aide d'Angular) est fourni dans le projet (repo "i
 
 Les principaux modules de node.js utilisés dans ce projet :
 
-- Express() : Nous utilisons express() pour la configuration du router. Express est un module de node.js et un framework JS. Express permet d'appliquer le CRUD à notre application.
+- bcrypt : permet de faire un "hash" du mot de passe du client, de maniere a ce que cette chaine de caractère ne soit pas stockées coté serveur (mais seulement ce hash). Ainsi lorsque l'utilisateur se connecte avec son mot de passe, ce mot de passe est de nouveau haché et comparé au hash du serveur. Si les deux hash viennent du même mot de passe, les hash se reconnaitront.
 
-- Mongoose : facilite la communication avec une base de donnée mongoDB ; mongoose est conçu pour node.js dont il est un module. Créer un schéma, appliquer le CRUD avec notre base de donnée, tout est possible avec Mongoose. Utilisation de dotenv pour securiser l'acces a mongoDB.
+- Body-parser : va nous permettre de "parser" le corps de la requête en objet json.
 
-- Multer : récupère et stocke sur le serveur les fichiers envoyés par les utilisateurs. Ici, il est configuré de manière à stocker dans le dossier images/ les images de sauces proposées par chaque utilisateur.
-modules de sécurité sur node.js
+- Cors : permet de prendre en charge des requêtes multi-origines sécurisées et des transferts de données entre des navigateurs et des serveurs web.
 
 - Dotenv : Dotenv permet de travailler avec des variables d'environnement et de sécuriser les mots de passe d'un backend node.js.
+
+- Express() : Nous utilisons express() pour la configuration du router. Express est un module de node.js et un framework JS. Express permet d'appliquer le CRUD à notre application.
+
+- Express-rate-limit : est un limiteur de restriction de tentative de connexion utilisateur.
 
 - Helmet : Helmet permet a l'application de respecter les recommandations OWASP.
 
 - JWT (JSON Web Tokens) : JWT est un module node.js qui permet de crypter les tokens d'authentification envoyés au client pour authentifier leur session, selon une clé définie par le développeur. Cette clé est généralement stockée dans le fichier .env.
 
-- bcrypt : permet de faire un "hash" du mot de passe du client, de maniere a ce que cette chaine de caractère ne soit pas stockées coté serveur (mais seulement ce hash). Ainsi lorsque l'utilisateur se connecte avec son mot de passe, ce mot de passe est de nouveau haché et comparé au hash du serveur. Si les deux hash viennent du même mot de passe, les hash se reconnaitront.
+- Multer : récupère et stocke sur le serveur les fichiers envoyés par les utilisateurs. Ici, il est configuré de manière à stocker dans le dossier images/ les images de sauces proposées par chaque utilisateur.
+modules de sécurité sur node.js
 
-- Mongoose-unique-validator :
+- Mongoose : facilite la communication avec une base de donnée mongoDB ; mongoose est conçu pour node.js dont il est un module. Créer un schéma, appliquer le CRUD avec notre base de donnée, tout est possible avec Mongoose. Utilisation de dotenv pour securiser l'acces a mongoDB.
 
-- Express-rate-limit :
+- Mongoose-unique-validator : permet de s'assurer que deux utilisateurs ne peuvent pas utiliser la même adresse e-mail.
 
-- Body-parser :
 
-- Cors :
 
 ## Back-end : Information (securité) ##
 
