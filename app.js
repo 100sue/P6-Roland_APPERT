@@ -19,7 +19,7 @@ const sauceRoutes = require("./routes/sauce.js");
 const userRoutes = require("./routes/user");
 
 
-// Connection à la BDD (MongoDB Atlas Database) :
+// Connection à la base de données (MongoDB Atlas Database) :
 
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`, 
   { useNewUrlParser: true, useUnifiedTopology: true })
@@ -43,6 +43,7 @@ app.use((req, res, next) => {
   );
   next();
 });
+
 
 // Je récupère le body en front sur l'objet request et "parse" le corps de la requête en objet json :
 

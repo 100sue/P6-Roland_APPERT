@@ -1,4 +1,5 @@
 // Limiteur de restriction de tentative de connexion utilisateur :
+// Après 3 tentatives, le compte est bloqué pendant cinq minutes.
 
 const rateLimit = require("express-rate-limit")
 
