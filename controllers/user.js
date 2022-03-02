@@ -1,6 +1,6 @@
 // Importation des npm nécessaires afin de crypter les informations (pour créer des token introuvables et aléatoires).
 // C'est-à-dire : sécuriser la connexion au compte.
-// Puis j'importe le "model" de création utilisateur.
+// Puis, on importe le "model" de création utilisateur.
 
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
@@ -8,9 +8,9 @@ const User = require('../models/User')
 
 
 // Signup : hashage 10 fois du password avec bcrypt.
-// Puis, créeation d'un nouvel utilisateur.
+// Puis, création d'un nouvel utilisateur.
 // En récupèrant le corps de la requête (= email), et "hash" du password quand l'utilisateur le crée.
-// Puis, sauvegarde de l'utilisateur dans la BDD
+// Puis, sauvegarde de l'utilisateur dans la BDD.
 
 exports.signup = (req, res, next) => {
     bcrypt.hash(req.body.password, 10)

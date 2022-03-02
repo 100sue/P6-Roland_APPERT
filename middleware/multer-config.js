@@ -1,12 +1,12 @@
 // Multer est un package qui nous permet de gérer les fichiers entrants dans les requêtes HTTP.
 // Ici, ce sera les images téléchargées par les users .
 // On va traduire les types de fichier pour générer des extensions possibles.
-// On enregistre les images téléchargées par le user dans le disc
-// la config de multer nécessite deux arguments : destination + filename prenant prenant 3 params chacun.
+// On enregistre les images téléchargées par le user dans le disk.
+// La configuration de multer nécessite deux arguments : destination + filename prenant prenant 3 paramètres chacun.
 // Le callback renvoie vers la destination d'enregistrement qui est le dossier images.
 // Le nom de fichier a considérer :
 // on va créer le nom du fichier (prend le nom d'origine, le split), et on remplace les espaces par des undescores.
-// on génère l'extension du fichieret on renvoie en callback avec le nom du fichier final.
+// on génère l'extension du fichier et on le renvoie en callback avec le nom du fichier final.
 
 const multer = require('multer');
 

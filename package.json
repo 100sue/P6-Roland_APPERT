@@ -1,11 +1,11 @@
 {
   "name": "back",
   "version": "1.0.0",
-  "description": "back-end du projet-6",
+  "description": "back-end du projet:Piiquante",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node (ou nodemon) server.js"
   },
   "author": "Roland APPERT",
   "license": "ISC",

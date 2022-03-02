@@ -1,8 +1,9 @@
 // Import d'express afin de créer des applis web avec Node.
-// Appel au module Express avec sa fonction
-// Import mongoose afin de faciliter les intéractions avec la bdd mongoDB.
-// Import de dotenv afin de protéger les informations de connexion vers la BDD.
-// Import de path afin de pouvoir travailler avec les chemins des fichiers.
+// Import de body-parser afin de pouvoir "parser" le body de la requête.
+// Appel au module Express avec sa fonction.
+// Import mongoose afin de faciliter les intéractions avec la base de données de mongoDB.
+// Import de path afin de pouvoir travailler avec les chemins des fichiers(module node qui sert à cacher notre addresse Mongo, marche avec dotenv).
+// Import de dotenv afin de protéger les informations de connexion vers la base de données.
 // Import de helmet afin de sécuriser les en-tête http de l'application express.
 
 const express = require("express");
@@ -13,7 +14,7 @@ const path = require("path");
 require("dotenv").config();
 
 
-// Pour les routes vers l'utilisateur et les sauces :
+// Routes vers l'utilisateur et les sauces :
 
 const sauceRoutes = require("./routes/sauce.js");
 const userRoutes = require("./routes/user");
@@ -27,7 +28,7 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 
-// Avant la route d'API, on ajoute la fonction (middleware) des headers permettant aux deux ports front et end de communiquer entre eux.
+// Avant la route d'API, on ajoute la fonction (middleware) des headers permettant aux deux ports, front et end, de communiquer entre eux.
 // "*" permet d'accéder a l'API depuis n'importe quelle origine.
 // Et, autorisation d'utiliser certains headers sur l'objet requête.
 
@@ -45,7 +46,7 @@ app.use((req, res, next) => {
 });
 
 
-// Je récupère le body en front sur l'objet request et "parse" le corps de la requête en objet json :
+// On récupère le body en front sur l'objet request et on "parse" le corps de la requête en objet json :
 
 app.use(bodyParser.json());
 

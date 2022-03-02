@@ -1,3 +1,5 @@
+// Le modèle schema pour mongoose.
+
 const mongoose = require('mongoose')
 
 const sauceSchema = mongoose.Schema({

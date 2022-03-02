@@ -1,5 +1,5 @@
-// Importation des npm nécessaires 
-// fs veut dire file-system, c'est ce qui nous permet de modifier et/ou supprimer un fichier.
+// Importation des npm nécessaires .
+// "fs" veut dire file-system, c'est ce qui nous permet de modifier et/ou supprimer un fichier.
 
 const Sauce = require('../models/sauce')
 const fs = require('fs')
@@ -51,13 +51,12 @@ exports.createSauce = (req, res, next) => {
 }
 
 
-
 // Modification d'une sauce :
 // Si la request concerne le changement de l'image : on trouve la sauce concernée par son id.
 // Suppression de son image et on supprime le lien entre l'ancienne image et la sauce en question.
 // Puis, on met à jour le reste du "body".
 // Et, on met à jour la sauce avec sa nouvelle image.
-// Si la modif n'a pas été portée sur l'image : alors, on récupére le contenu du "body" et on met à jour la sauce concernée.
+// Si la modification n'a pas été portée sur l'image : alors, on récupére le contenu du "body" et on met à jour la sauce concernée.
 
 exports.modifySauce = (req, res, next) => {
     const sauceObject = req.file ?

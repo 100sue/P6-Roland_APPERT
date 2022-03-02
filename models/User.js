@@ -1,5 +1,5 @@
-// le modèle schema pour l'email et le mot de passe
-// L' email unique est vérifié par la dépendance "plugin uniqueValidator"
+// Le modèle schema pour l'email et le mot de passe.
+// L' email unique est vérifié par la dépendance "plugin uniqueValidator".
 
 
 const mongoose = require('mongoose')
