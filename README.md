@@ -27,14 +27,33 @@ Ce site permet aux utilisateurs de télécharger leurs sauces piquantes préfér
 Ce projet utilise NodeJS et MongoDB a été choisi pour la base de données. 
 Nous utilisons node.js pour construire le backend et, ainsi ajouter les modules nécéssaires .
 
+<br>
 
 ## Frontend : ##
 
-Le Frontend (développé à l'aide d'Angular) est fourni dans le projet (repo "ici")
+Le Frontend (développé à l'aide d'Angular) est fourni dans le projet (Repo " ici ").
+
+Pour exécuter le frontend de l'application : 
+
+- Ouvrez un terminal et allez dans "front".
+- Exécutez "npm install".
+- Exécutez "npm run start" et laissez le terminal ouvert.
+
+Puis, allez sur http://127.0.0.1:8081 . 
+
+Vous pouvez vous inscrire, vous connecter, publier une sauce, modifier une sauce, supprimer une sauce, liker une sauce, vous déconnecter, etc.
+
 
 ## Back-end : ##
 
-Les principaux modules de node.js utilisés dans ce projet :
+Pour exécuter le backend de l'application : 
+- Ouvrez un second terminal et allez dans "back".
+- Exécutez "npm install".
+- Exécutez "node server" et laissez le terminal ouvert.
+- Vérifiez qu'un message affiche "MongoDB connecté".
+
+
+### Les principaux modules de node.js utilisés dans ce projet : ###
 
 - bcrypt : permet de faire un "hash" du mot de passe du client, de maniere a ce que cette chaine de caractère ne soit pas stockées coté serveur (mais seulement ce hash). Ainsi lorsque l'utilisateur se connecte avec son mot de passe, ce mot de passe est de nouveau haché et comparé au hash du serveur. Si les deux hash viennent du même mot de passe, les hash se reconnaitront.
 
@@ -61,9 +80,11 @@ modules de sécurité sur node.js
 
 
 
-## Back-end : Information (securité) ##
+## Back-end : Information (Securité) ##
 
 Les variables d'environnement contenant l'identifiant, le mot de passe, le host et le nom de la base de données ainsi que la clé pour l'encodage sont contenues dans un fichier nommé ".env" à la racine du back-end. 
+<br>
+
 Ce fichier sera fourni avec les livrables mais pas sur ce repository.
 
 
