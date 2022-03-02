@@ -33,7 +33,7 @@ Nous utilisons node.js pour construire le backend et, ainsi ajouter les modules 
 
 Le Frontend (développé à l'aide d'Angular) est fourni dans le projet (Repo " ici ").
 
-### Pour exécuter le frontend de l'application : ###
+ Pour exécuter le frontend de l'application : 
 
 - Ouvrez un terminal et allez dans "front".
 - Exécutez "npm install".
@@ -46,7 +46,7 @@ Vous pouvez vous inscrire, vous connecter, publier une sauce, modifier une sauce
 
 ## Back-end : ##
 
-### Pour exécuter le backend de l'application : ###
+ Pour exécuter le backend de l'application : 
 - Ouvrez un second terminal et allez dans "back".
 - Exécutez "npm install".
 - Exécutez "node server" et laissez le terminal ouvert.
