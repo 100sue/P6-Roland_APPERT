@@ -27,6 +27,7 @@ Ce site permet aux utilisateurs de télécharger leurs sauces piquantes préfér
 Ce projet utilise NodeJS et MongoDB a été choisi pour la base de données. 
 Nous utilisons node.js pour construire le backend et, ainsi ajouter les modules nécéssaires .
 
+<br>
 
 ## Frontend : ##
 
@@ -41,6 +42,7 @@ Le Frontend (développé à l'aide d'Angular) est fourni dans le projet (Repo " 
 Et voilà ! Rendez-vous sur http://127.0.0.1:8081/login. 
 Vous pouvez vous inscrire, vous connecter, publier une sauce, modifier une sauce, supprimer une sauce, liker une sauce, vous déconnecter, etc.
 
+<br>
 
 ## Back-end : ##
 
@@ -50,6 +52,7 @@ Vous pouvez vous inscrire, vous connecter, publier une sauce, modifier une sauce
 - Exécutez "node server" et laissez le terminal ouvert.
 - Vérifiez qu'un message affiche "MongoDB connecté".
 
+<br>
 
 ### Les principaux modules de node.js utilisés dans ce projet : ###
 
